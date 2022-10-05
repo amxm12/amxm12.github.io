@@ -1,16 +1,113 @@
-<html>
-    <body>
-        <h1>Hello Everyoneee!</h1><br>
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Amanda's Page</title>
 
-        <img src="pic1.jpg"/>
-        <h2>About Myself</h2>
-        <p>I am Amanda, and I'm interested in using data to draw meaningful insights. I am currently a Year 2 student in SMU!</p>
-        <p>Here's some hobbies of mine:</p>
-        <ul>
-            <li>Travelling</li>
-            <li>Hiking</li>
-            <li>Spending time with friends</li>
-        </ul>
-    </body>
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <!-- <script src="https://kit.fontawesome.com/a076d05399.js" crossorigin="anonymous"></script> -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-iYQeCzEYFbKjA/T2uDLTpkwGzCiq6soy8tYaI1GyVh/UjpbCx/TYkiZhlZB6+fzT" crossorigin="anonymous">
+</head>
+<body>
+    <nav class="navbar navbar-expand-lg bg-dark">
+        <div class="container">
+          <a class="navbar-brand" href="#">
+            <img src="new.jpg" alt="" width="40" height="40">
+          </a>
+          <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNavAltMarkup" aria-controls="navbarNavAltMarkup" aria-expanded="false" aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon"></span>
+          </button>
+          <div class="collapse navbar-collapse d-flex justify-content-end" id="navbarNavAltMarkup">
+            <div class="navbar-nav">
+              <a class="nav-link text-white active" aria-current="page" href="#">Home</a>
+              <a class="nav-link text-white" href="book.html">Books</a>
+              <a class="nav-link text-white" href="travel.html">Travel</a>
+            </div>
+          </div>
+        </div>
+    </nav>
+
+    <div class="container">
+        <div class="row justify-content-center mt-3">
+            <div class="col-6" style="background-color: black; width: 200px; height: 30px;">
+                <div id="MyClockDisplay" class="clock text-center text-white" onload="showTime()"></div>
+            </div>
+        </div>
+    </div>
+
+    <h3 class="text-center mt-5">Out & About</h3>
+
+    <div class="container">
+        <div class="row justify-content-center">
+            <div class="col-8">
+                <div id="carouselExampleIndicators" class="carousel slide" data-bs-ride="true">
+                    <div class="carousel-indicators">
+                      <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="0" class="active" aria-current="true" aria-label="Slide 1"></button>
+                      <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="1" aria-label="Slide 2"></button>
+                      <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="2" aria-label="Slide 3"></button>
+                    </div>
+                    <div class="carousel-inner">
+                      <div class="carousel-item active">
+                        <img src="pict3.jpeg" class="d-block" alt="..." style="height: 300px; width: 700px;">
+                      </div>
+                      <div class="carousel-item">
+                        <img src="pict4.jpeg" class="d-block" alt="..." style="height: 300px; width: 700px;">
+                      </div>
+                      <div class="carousel-item">
+                        <img src="pict1.jpeg" class="d-block" alt="..." style="height: 300px; width: 700px;">
+                      </div>
+                    </div>
+                    <button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide="prev">
+                      <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+                      <span class="visually-hidden">Previous</span>
+                    </button>
+                    <button class="carousel-control-next" type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide="next">
+                      <span class="carousel-control-next-icon" aria-hidden="true"></span>
+                      <span class="visually-hidden">Next</span>
+                    </button>
+                </div>
+            </div>
+        </div>
+    </div>
+
+
+    <br>
+    <p class="text-light bg-dark text-center mt-3">2022</p>
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.1/dist/js/bootstrap.bundle.min.js" integrity="sha384-u1OknCvxWvY5kfmNBILK2hRnQC3Pr17a+RTT6rIHI7NnikvbZlHgTPOOmMi466C8" crossorigin="anonymous"></script>
+    <script>
+            function showTime(){
+            var date = new Date();
+            var h = date.getHours(); // 0 - 23
+            var m = date.getMinutes(); // 0 - 59
+            var s = date.getSeconds(); // 0 - 59
+            var session = "AM";
+            
+            if(h == 0){
+                h = 12;
+            }
+            
+            if(h > 12){
+                h = h - 12;
+                session = "PM";
+            }
+            
+            h = (h < 10) ? "0" + h : h;
+            m = (m < 10) ? "0" + m : m;
+            s = (s < 10) ? "0" + s : s;
+            
+            var time = h + ":" + m + ":" + s + " " + session;
+            document.getElementById("MyClockDisplay").innerText = time;
+            document.getElementById("MyClockDisplay").textContent = time;
+            
+            setTimeout(showTime, 1000);
+        }
+
+        showTime();
+    </script>
+</body>
 </html>
 
