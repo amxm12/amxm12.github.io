@@ -1,0 +1,107 @@
+body {
+    background-color: lightblue;
+    margin: 0;
+    padding: 0;
+}
+
+.intro {
+    color: lightcoral;
+    text-align: center;
+    font-weight: bold;
+    font-family: 'Times New Roman', Times, serif;
+}
+
+.fa-linkedin {
+    background: #007bb5;
+    color: white;
+    text-decoration: none;
+    width: 50px;
+    display: inline-block;
+}
+
+.container1 {
+    box-sizing: border-box;
+    margin: 40px;
+    padding: 10px;
+    background-color: white;
+    height: 350px;
+}
+
+.main {
+    /* float: left;
+    border: 100px solid;
+    max-width: 100%;
+    height: auto;
+    border-image: url("../pic1.jpg") stretch; */
+
+
+    /* object-fit: cover;
+    width: 50%; */
+
+    /* display: block;
+    max-width: 100%;
+    height: auto; */
+
+    /* background-image: url("../justin_bg.jpg");
+    /* background-repeat: no-repeat;
+    height: 100%; */
+}
+
+.sub {
+    float: right;
+    width: 48%;
+    background-color: blanchedalmond;
+    margin-top: 40px;
+}
+
+/* .container2 {
+    box-sizing: border-box;
+    margin: 40px;
+    padding: 10px;
+    background-color: white;
+    height: 350px;
+} */
+
+.container2 {
+    box-sizing: border-box;
+    margin: 40px;
+    padding: 10px;
+    background-color: white;
+    height: 350px;
+
+    /* width: 100px; */
+    /* height: 50px; */
+    /* margin: 0 auto; */
+}
+
+iframe {
+    display: block;
+    border-style:none;
+    margin: auto;
+}
+/* iframe {
+    display: block;
+    margin: 0 auto;
+    width:300;
+    height:200;
+} */
+
+/* #main-footer {
+    background-color: grey;
+    text-align: center;
+    color: white;
+    padding: 0px;
+    margin-top: 10px;
+    margin-bottom: 5px;
+} */
+
+.clock {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translateX(-50%) translateY(-50%);
+    color: #17D4FE;
+    font-size: 60px;
+    font-family: Orbitron;
+    letter-spacing: 7px;
+}
